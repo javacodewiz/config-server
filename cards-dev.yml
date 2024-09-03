@@ -14,3 +14,8 @@ spring:
 contact:
   email:
     - tarun67@gmail.com
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
