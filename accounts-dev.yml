@@ -3,7 +3,6 @@ spring:
     url: jdbc:mysql://localhost:3307/commondb
     username: root
     password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
     sql:
