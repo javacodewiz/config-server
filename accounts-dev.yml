@@ -6,11 +6,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: create
     sql:
       init:
         mode: always
-    hibernate:
-      ddl-auto: update
   management:
     endpoints:
       web:
