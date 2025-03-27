@@ -38,9 +38,25 @@ management:
   info:
     env:
       enabled: true
+  health:
+    circuit-breaker:
+      enabled: true
 
 info:
   app:
     name: employee-service
     version: 1.0
     description: Employee Service
+
+resiliance4j:
+  ciruitebreaker:
+    instance:
+      employee-service:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: COUNT_BASED
